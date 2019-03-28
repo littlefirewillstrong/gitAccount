@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户自定义属性</title>
+<style>
+	#box{
+		width:400px;
+		height:400px;
+		border:1px solid #ccc;
+		padding:20px;
+		text-align: center;
+		line-height: 400px;
+		margin-top:30px;
+		background-color:#222;
+	}
+	
+	
+	.hide{
+		display:none;
+	}
+</style>
+
+
+</head>
+
+<body>
+<div>
+<input type="button" value="上一张" id="prev">
+<input type="button" value="下一张" id="next">
+</div>
+<div id="box">
+	<img src="../images/fnk1.png" alt="" id="pic">
+</div>
+
+
+<script type="text/javascript">
+		var prev = document.getElementById('prev');
+		var next = document.getElementById('next');
+		var box = document.getElementById('box');
+		var pic = document.getElementById('pic');
+	
+        var n=1;
+	
+	    next.onclick=function (){
+			n++;  //累加，每点一次加上1，和(n+=1)与(n=n+1)相同;
+			
+			if(n>8){
+				n=8;
+			}
+			
+			pic.src='images/fnk' + n + '.png';
+		}
+		
+		
+		prev.onclick=function (){
+			n--;      //递减，每点一次减去1，和(n-=1)与(n=n-1)相同;
+			
+			if(n<2){
+				n=1
+			}
+			
+			pic.src='images/fnk' + n + '.png';
+		}
+		
+		
+</script>
+
+
+</body>
+</html>

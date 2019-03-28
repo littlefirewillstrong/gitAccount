@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>今日消费</title>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta http-equiv="Cache-Control" content="no-siteapp" /><!--禁止浏览器转码，插入广告-->
+<meta name="Keywords" content="活泉账本，记账,账本,活泉工作室产品,消费统计,收入统计,支出统计，物价查询">
+<meta name="Description" content="活泉账本是活泉工作室下的产品，主要用于收支记账，收支统计，另提供物价查询、月消费报告等等便捷功能。">
+<meta name="author" content="杨晏">
+
+<link rel="shortcut icon" href="images/logo32.png" type="image/x-icon">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="padding-bottom:120px;">
+<!--
+	<div id="top">
+	    <p class="tleft">返回</p>
+	    <p class="ttitle">今日消费</p>
+	    <p class="tright"><img src="images/set.png" alt=""></p>
+	</div>-->
+	<div id="xfjl">
+	    <div class="mhead">
+			<div class="zj_container yy_mgb20">
+				<div class="zj_wrap">
+			       <div class="yy_tab">
+					   <div class="yy_account">
+							<p class="zj_sm1 C0cc">总计</p>
+							<p  class="total_wrap C0ff">
+								<i>￥</i>
+								<em id="total">60</em>
+								<i>元</i>
+							</p>
+							<p class="zj_sm2 C0cc">Total</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	    	<div class="yy_pdb10 cf">
+			    <div class="yy_lie fleft">
+				    <span class="C0ff">
+						<i>￥</i><em id="shf">20.00</em>
+					</span>
+					<p class="C0cc">生活费</p>
+				</div>
+			    <div class="yy_lie fleft">
+				    <span class="C0ff">
+						<i>￥</i><em id="qtxf">30.00</em>
+					</span>
+					<p class="C0cc">其它消费</p>
+				</div>
+			</div>
+	    </div>
+	    <div id="gz" class="cf"><!--当超出计划时添加class为gz_warning，将outside启动，将none添加到within上-->
+			<div class="ntitle fleft">公告：</div>
+			<marquee behavior="scroll" loop="-1" class="ncontent fleft" >
+			<em id="within">今日消费在预计的消费计划之中！</em>
+			<em id="outside" class="none">今日消费超出原计划消费￥<span>5.00</span>元</em>
+			</marquee>
+		</div>
+	    <div class="main">
+			<div class="cf">
+				<button type="button" class="fleft btn btn_sh on">生活费详情</button>
+				<button type="button" class="fleft btn  btn_qt off">其它消费详情</button>
+			</div>
+			<div class="xfxq">
+				<ul class="xf_infor cf">
+					<li>早餐:￥<em>10</em>元</li>
+					<li>零食:￥<em>9.5</em>元</li>
+					<li>早餐:￥<em>10</em>元</li>
+					<li>零食:￥<em>9.5</em>元</li>
+				</ul>
+                <div class="line"></div>
+	            <div class="bz">备注：<span>某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某某</span></div>
+		    </div>
+	    </div>
+		<p style="text-align: center;"><a href="#">查看往日消费>></a></p>
+	</div>
+	<div id="nav">
+		<div><a href="pages/editAccount.html"><button type="button" class="btn_jz">立即记账</button></a></div>
+		<ul class="nav cf">
+			<li id="home">
+				<div>
+					<a href="index.html">
+						<img src="images/icon3_xz.png" alt="">
+						<span class="focus">首页</span>
+					</a>
+				</div>
+			</li>
+			<li id="menu">
+				<div>
+					<a href="functionCenter.html">
+						<img src="images/icon2.png" alt="">
+						<span>功能中心</span>
+					</a>
+				</div>
+			</li>
+			<li id="person">
+				<div>
+					<a href="#">
+						<img src="images/icon1.png" alt="">
+						<span>个人中心</span>
+					</a>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/yy_layout.js"></script>
+</body>
+</html>

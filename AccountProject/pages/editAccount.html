@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>支出记账</title>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta http-equiv="Cache-Control" content="no-siteapp" /><!--禁止浏览器转码，插入广告-->
+<meta name="Keywords" content="活泉账本，记账,账本,活泉工作室产品,消费统计,收入统计,支出统计，物价查询">
+<meta name="Description" content="活泉账本是活泉工作室下的产品，主要用于收支记账，收支统计，另提供物价查询、月消费报告等等便捷功能。">
+<meta name="author" content="杨晏">
+
+<link rel="shortcut icon" href="../images/logo32.png" type="image/x-icon">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body style="padding-bottom:120px;">
+    <div id="top">
+		<a href="../index.html"><p class="tleft">首页</p></a>
+	</div>
+	<div class="btnWrap cf">
+	    <div class="W33 fleft">
+	      <p class="mgr5">
+	  	     <button class="btnSmall btnSactive">支出记账</button>
+	  	  </p>
+	    </div>
+	    <div class="W33 fleft">
+           <p class="mgl5">
+	       	  <button class="btnSmall">收入记账</button>
+	       </p>
+	    </div>
+	    <div class="W33 fleft">
+           <p class="mgl5">
+	       	  <button class="btnSmall">快捷记账</button>
+	       </p>
+	    </div>
+	</div>
+    <form>
+		<ul class="formWrap">
+			<li>
+			   <label  class="cf">
+				<div class="fleft wlabel">消费金额</div>
+				<div class="fleft"><input type="text" class="wbox" name="spendMoney" placeholder="￥0.00"/></div>
+			   </label>	
+			</li>
+			<li>
+			    <label  class="cf">
+				<div class="fleft wlabel">消费类型</div>
+				<div class="fleft">
+				   <select class="wbox" name="spendType" placeholder="请点此选择">
+					  <option value="">请点此选择</option>
+					  <option value="zaocan">早餐</option>
+					  <option value="zhongcan">中餐</option>
+					  <option value="wancan">晚餐</option>
+					  <option value="maicai">买菜</option>
+					  <option value="yiwu">衣物</option>
+					  <option value="shYongping">生活用品</option>
+					  <option value="xxYongping">学习用品</option>
+					  <option value="other">其它</option>
+				   </select>
+				</div>
+				</label>	
+			</li>
+			<li>
+			   <label  class="cf">
+				<div class="fleft wlabel">具体物品</div>
+				<div class="fleft"><input type="text" name="JTWP" class="wbox" placeholder="输入具体购买什么"/></div>
+			   </label>	
+			</li>
+			<li>
+			   <label  class="cf">
+				<div class="fleft wlabel">消费数量</div>
+				<div class="fleft"><input type="text" name="spendNum"  class="wbox" placeholder="输入数量" value="1"/></div>
+			   </label>	
+			</li>
+			<li>
+			   <label  class="cf">
+				<div class="fleft wlabel">填写单位</div>
+				<div class="fleft">
+					<select class="wbox" name="TXDW" placeholder="请点此选择">
+					  <option value="kg">公斤</option>
+					  <option value="jin">斤</option>
+					  <option value="liang">两</option>
+					  <option value="ge">个</option>
+					  <option value="kuai">块</option>
+					  <option value="bao">包</option>
+					  <option value="dai">袋</option>
+					  <option value="pian">片</option>
+					  <option value="zhang">张</option>
+					  <option value="pi">匹</option>
+					  <option value="tou">头</option>
+					  <option value="other">其它</option>
+				   </select>
+				   <input type="text" class="wbox none" placeholder="手动输入单位"/>
+				</div>
+			   </label>	
+			</li>
+			<li>
+			   <label  class="cf">
+				<div class="fleft wlabel">备注</div>
+				<div class="fleft">
+					<textarea name="remarks" class="wbox manyBox" placeholder="若有特殊说明，可以在此备注一下"></textarea>
+				</div>
+			   </label>	
+			</li>
+		</ul>
+		<div class="setKJwrap">
+		   <label>
+			<input type="checkbox" name="SZKJ" style="vertical-align: -2px;" id="setKJ">
+			<span>点此勾选将此账单设置为快捷记账</span>
+           </label>	
+	        <span id="showTips"><img src="../images/svg/tips.svg" class="iconTips" alt="查看帮助"><i class="tips">查看帮助</i></span>
+		</div>
+	</form>	
+    <div class="btnContainer"><button type="button" class="btn_save" id="saveAccountBtn">立即保存</button></div>
+	<div class="tipsContainer none" id="saveOver">
+		<div class="tipsWrap">
+			<div class="tipsCont">
+				<h3>已保存成功！</h3>
+				<img src="../images/svg/isOver.svg" alt="">
+			</div>
+			<div class="tipsBtn cf">
+				<button class="btn fleft" id="closeSaveOver">再记一笔</button>
+				<a href="../index.html"><button class="btn fleft">不记了</button></a>
+			</div>
+		</div>
+	</div>
+	<div class="tipsContainer none" id="KJtips">
+		<div class="tipsWrap">
+			<div class="tipsCont">
+				<h3>快捷记账说明</h3>
+				<p>如果你以后的消费会碰到与刚才记的这笔消费相同时，建议你勾选，设置为快捷记账。</p>
+				<p>下次记账时只需在快捷记账栏目，选择这笔账单，点击“保存”，就能快速的记下这笔消费，减少重复输入。</p>
+			</div>
+			<div class="tipsBtn cf">
+				<button class="btn fleft" id="closeKJtips">知道了</button>
+				<button class="btn fleft" id="goCheck">去勾选</button>
+			</div>
+		</div>
+	</div>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/yy_layout.js"></script>
+</body>
+</html>

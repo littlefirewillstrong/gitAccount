@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户自定义属性</title>
+<style>
+	#box{
+		width:400px;
+		height:400px;
+		border:1px solid #ccc;
+		padding:20px;
+		text-align: center;
+		line-height: 400px;
+		margin-top:30px;
+		background-color:aqua;
+	}	
+</style>
+
+
+</head>
+
+<body>
+<span>style属性：</span>
+<input type="text" id="text1" class="text1"  placeholder="请输入属性名" autofocus><span id="err"></span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span>style属性值：</span> <input type="text" id="text2" class="text1" disabled="disabled" placeholder="请输入属性值">
+<input type="button" value="确定" id="btn">
+<div id="box">
+	修改属性
+</div>
+
+
+<script type="text/javascript">
+
+		var text1 = document.getElementById('text1');
+		var text2 = document.getElementById('text2');
+		var btn = document.getElementById('btn');
+		var box = document.getElementById('box');
+		var err = document.getElementById('err');
+	    
+	  
+		
+	    text1.onchange = function (){
+			
+			if (text1.value.trim()) {
+				text2.disabled = '';
+				err.style.color='green';
+				err.innerHTML = '√';
+				err.style['font-size']='12px';
+			}else{
+				text2.disabled = 'disabled';
+				err.style.color='red';
+				err.style['font-size']='12px';
+				err.style['font-family']='宋体';
+				err.innerHTML = 'xx 属性名不能为空！'
+			}
+			
+		}
+	
+	    
+		
+		btn.onclick=function (){
+			
+		    var name = text1.value;
+			var val = text2.value;
+
+			box.style[name] = val;
+			
+			
+			//box.innerHTML = '<p>line-height的高度是：</p>' + box.style['line-height'];
+			
+		};
+		
+		
+		
+</script>
+
+
+</body>
+</html>
